@@ -10,17 +10,6 @@ void checkn(listint_t *ptr)
 		ptr->next->prev = ptr->prev;
 }
 /**
- * checkp - ...
- * @ptr1: ...
- * @ptr2: ...
-*/
-void checkp(listint_t *ptr1, listint_t *ptr2)
-{
-	ptr2 = NULL;
-	if (ptr1)
-		ptr2 = ptr1->next;
-}
-/**
  * insertion_sort_list - sorts a doubly linked
  * list of integers in ascending order using the Insertion sort algorithm.
  * @list: ...
@@ -63,6 +52,8 @@ void insertion_sort_list(listint_t **list)
 			}
 		}
 		cur = next;
-		checkp(cur, next);
+		next = NULL;
+		if (cur)
+			next = cur->next;
 	}
 }
