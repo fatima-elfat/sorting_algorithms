@@ -16,10 +16,9 @@ void checkn(listint_t *ptr)
 */
 void checkp(listint_t *ptr1, listint_t *ptr2)
 {
+	ptr2 = NULL;
 	if (ptr1)
 		ptr2 = ptr1->next;
-	else
-		ptr2 = NULL;
 }
 /**
  * insertion_sort_list - sorts a doubly linked

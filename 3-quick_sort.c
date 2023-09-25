@@ -1,4 +1,5 @@
 #include "sort.h"
+
 /**
  * Lomuto_parts - uses the Lomuto partition.
  * @array: an array of ints.
