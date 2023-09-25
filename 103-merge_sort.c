@@ -23,9 +23,9 @@ void ms_recursive(int *array, int *array02, size_t a, size_t z)
 		for (i = a, j = middle; i < middle && j < z; k++)
 		{
 			if (array[i] >= array[j])
-				array02[k] = array[i++];
-			else
 				array02[k] = array[j++];
+			else
+				array02[k] = array[i++];
 		}
 		for (; i < middle; i++)
 			array02[k++] = array[i];
