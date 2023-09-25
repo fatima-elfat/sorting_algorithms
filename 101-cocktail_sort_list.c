@@ -5,6 +5,7 @@
  * @list: the head of the list of ints.
  * @l1: the tail of the list.
  * @l2: the current swapping node.
+ * @st: ahead 1 or behind -1.
  */
 void swap(listint_t **list, listint_t **l1, listint_t **l2, int st)
 {
@@ -16,13 +17,13 @@ void swap(listint_t **list, listint_t **l1, listint_t **l2, int st)
 		if (!((*l2)->next))
 			*l1 = tmp;
 		else
-			(*l2)->next->prev = tmp;	
+			(*l2)->next->prev = tmp;
 		tmp->next = (*l2)->next;
 		(*l2)->prev = tmp->prev;
 		if (!(tmp->prev))
 			*list = *l2;
 		else
-			tmp->prev->next = *l2;	
+			tmp->prev->next = *l2;
 		(*l2)->next = tmp;
 		tmp->prev = *l2;
 		*l2 = tmp;
@@ -57,7 +58,7 @@ void cocktail_sort_list(listint_t **list)
 	listint_t *l1, *l2;
 	int boo = 0;
 
-	if (!list || !(*list) || !((*list)->next) )
+	if (!list || !(*list) || !((*list)->next))
 		return;
 	for (l1 = *list; l1->next;)
 		l1 = l1->next;
