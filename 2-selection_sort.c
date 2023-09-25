@@ -17,12 +17,12 @@ void selection_sort(int *array, size_t size)
 	for (i = 0; i < size - 1; i++)
 	{
 		min = i;
-		for (j = i + 1; j < size; j++)
+		for (min = i + 1, j = size - 1; j > i ; j--)
 		{
-			if (array[j] < array[min])
+			if (array[min] > array[j])
 				min = j;
 		}
-		if (min != i)
+		if (array[min] < array[i])
 		{
 			tmp = array[i];
 			array[i] = array[min];

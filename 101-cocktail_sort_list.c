@@ -69,18 +69,18 @@ void cocktail_sort_list(listint_t **list)
 		{
 			if (l2->n < l2->prev->n)
 			{
+				boo = 0;
 				swap(list, &l1, &l2, -1);
 				print_list((const listint_t *)*list);
-				boo = 0;
 			}
 		}
 		for (l2 = *list; l2 != l1; l2 = l2->next)
 		{
 			if (l2->n > l2->next->n)
 			{
+				boo = 0;
 				swap(list, &l1, &l2, 1);
 				print_list((const listint_t *)*list);
-				boo = 0;
 			}
 		}
 	}
