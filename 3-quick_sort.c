@@ -5,7 +5,7 @@
  * @size: the size of array.
  * @start: the start of the array.
  * @end: the end of the array.
- * Returns: ...
+ * Return: ...
  */
 int Lomuto_parts(int *array, int size, int start, int end)
 {
