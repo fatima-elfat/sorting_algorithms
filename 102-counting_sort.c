@@ -1,17 +1,17 @@
 #include "sort.h"
 /**
- * conting_sort - conting sort algo
+ * counting_sort - counting sort algo
  * @array: array to sort
  * @size: size of array
  */
-void conting_sort(int *array, size_t size)
+void counting_sort(int *array, size_t size)
 {
 	int i, j;
 	int *cont, *l;
 
 	if (!array || size < 2)
 		return;
-	for (j = array[0], i = 1; i < size; i++)
+	for (j = array[0], i = 1; i < (int)size; i++)
 	{
 		if (array[i] > j)
 			j = array[i];
